@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Section</title>
+    <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+    <!-- NAV Section (Start) -->
+    <nav>
+        <ul>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">TV Series</a></li>
+            <li><a href="#">Audio</a></li>
+        </ul>
+        <div class="logo"><a style="color: black; text-decoration: none;" href="C:/Users/laksh/OneDrive/Desktop/Suven Consultants Internship/Project-1/index.html"> 365</a></div>
+    </nav>
+    <!-- NAV Section (End) -->
+
+    <!-- photo slider starting -->
+    <div id="gallerywrapper">
+        <div id="gallery">
+            <div id="pic1">
+                <img src="Images/house.jpg" height="500px" width="1550.3px" alt="Image 1">
+                <a class="previous" href="#pic5">&lt;</a>
+                <a class="next" href="#pic2">&gt;</a>
+                <h3>Image 1</h3>
+            </div>
+            <div id="pic2">
+                <img src="Images/realm-reborn.jpg" height="500px" width="1550.3px" alt="Image 2">
+                <a class="previous" href="#pic1">&lt;</a>
+                <a class="next" href="#pic3">&gt;</a>
+                <h3>Image 2</h3>
+            </div>
+            <div id="pic3">
+                <img src="Images/the-dark-knight.jpg" height="500px" width="1550.3px" alt="Image 3">
+                <a class="previous" href="#pic2">&lt;</a>
+                <a class="next" href="#pic4">&gt;</a>
+                <h3>Image 3</h3>
+            </div>
+            <div id="pic4">
+                <img src="Images/aquaman1.jpg" height="500px" width="1550.3px" alt="Image 4">
+                <a class="previous" href="#pic3">&lt;</a>
+                <a class="next" href="#pic5">&gt;</a>
+                <h3>Image 4</h3>
+            </div>
+            <div id="pic5">
+                <img src="Images/coffee.jpg" height="500px" width="1550.3px" alt="Image 5">
+                <a class="previous" href="#pic4">&lt;</a>
+                <a class="next" href="#pic1">&gt;</a>
+                <h3>Image 5</h3>
+            </div>
+        </div>
+    </div>
+    <!-- photo slider Ends -->
+
+    <!-- selection bar -->
+    <br><br><br><br><br><b><br><br></br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="dropdown">
+        <button class="dropbtn"><span id="genreText">Genre</span><i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+            <a onclick="getMediaPosters(this.text)">All</a>
+            <a onclick="getMediaPosters(this.text)">Action</a>
+            <a onclick="getMediaPosters(this.text)">Drama</a>
+            <a onclick="getMediaPosters(this.text)">Sci-Fi</a>
+        </div>
+    </div>
+    <div class="search-container">
+        <form onsubmit="javascript: false;">
+            <input type="text" class="input-medium search-query" placeholder="Search your favourite movie title" name="search" oninput="updateResults()">
+
+            <div class="search-container-button">
+            </div>
+
+        </form>
+    </div>
+
+    <div id="media-carousel-container">
+
+
+        <div id="media-holder-action">
+
+            <div id="image-container-action">
+                <div class="movies-action">
+                    <div class="media-carousel-movies">
+                        <img class="img1" src="Images/haider.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay1"><b class="movie-title">Haider</b><br/>Indian crime tragedy film.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img2" src="Images/dream2.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay2"><b class="movie-title">Dream 2</b><br/>Thriller, Mystery & Comedy </div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img3" src="Images/batman.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay3"><b class="movie-title">Batman</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img4" src="Images/monster-manav.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay4"><b class="movie-title">Monster Manav</b><br/>Japanese manga series written by Tsugumi.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img5" src="Images/kill-bill.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay5"><b class="movie-title">Kill Bill</b><br/>2003 American martial arts film.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img6" src="Images/rowdy.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay6"><b class="movie-title">Rowdy</b><br/>Indian action drama film.</div>
+                    </div>
+                </div>
+
+                <div class="movies-drama">
+                    <div class="media-carousel-movies">
+                        <img class="img7" src="Images/Agnipath.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay7"><b class="movie-title">Doctor Strange</b><br/>A Marvel action movie.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img8" src="Images/ankhein.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay8"><b class="movie-title">Haider</b><br/>Thriller, Mystery & Comedy .</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img9" src="Images/guide.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay9"><b class="movie-title">Guide</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img10" src="Images/deewar.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay10"><b class="movie-title">Star Wars</b><br/>2016 ‧ Fantasy/Science Fiction.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img11" src="Images/sholay.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay11"><b class="movie-title">The Real heaven</b><br/>A Science Fiction movie</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img12" src="Images/k3g.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay12"><b class="movie-title">Bahubali</b><br/>Action,thriller &suspense movie </div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img13" src="Images/shaurya.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay13"><b class="movie-title">wonder-women</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img14" src="Images/cheeni-kam.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay14"><b class="movie-title">Charlie Chaplin</b><br/>A Comedy & drama movie</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img15" src="Images/ishq-vishq.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay15"><b class="movie-title">Doctor Strange 2</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img16" src="Images/padmavat.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay16"><b class="movie-title">Baby</b><br/>Indian suspence thriller movie.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img17" src="Images/kai-po-che.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay17"><b class="movie-title">Kick</b><br/>Indian action movie.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img18" src="Images/rabata.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay18"><b class="movie-title">Mummy</b><br/>A Science Fiction movie.</div>
+                    </div>
+                </div>
+
+                <div class="movies-scifi">
+                    <div class="media-carousel-movies">
+                        <img class="img19" src="Images/intersteller.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay19"><b class="movie-title">The Huful Eight</b><br/>Hollywood action & suspence movie.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img20" src="Images/star-wars.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay20"><b class="movie-title">Black Widow</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img21" src="Images/thor.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay21"><b class="movie-title">Fast and Furious</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img22" src="Images/captain-america.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay22"><b class="movie-title">An agent</b><br/>Suspence, thriller movie.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img23" src="Images/x-men.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay23"><b class="movie-title">The 2</b><br/>An animated comedy movie</div>
+                    </div>
+
+                    <div class="media-carousel-movies">
+                        <img class="img24" src="Images/black-widow.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay24"><b class="movie-title">Spiderman Far from home</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img25" src="Images/iron-man.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay25"><b class="movie-title">Iron-Man</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img26" src="Images/hulk.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay26"><b class="movie-title">She Hulk</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img27" src="Images/captain-marvel.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay27"><b class="movie-title">Lai Bhaari</b><br/>A Drama Action movie.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img28" src="Images/wonder-women.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay28"><b class="movie-title">Wonder Woman</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img29" src="Images/batwoman.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay29"><b class="movie-title">The Drama</b><br/>A hoolywood drama</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img30" src="Images/batman1.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay30"><b class="movie-title">The Musician</b><br/>A Nature movie.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img31" src="Images/superman1.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay31"><b class="movie-title">Bleach</b><br/>A korean drama.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img32" src="Images/superwoman.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay32"><b class="movie-title">Superwoman</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img33" src="Images/doctor-strange.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay33"><b class="movie-title">Everything</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img34" src="Images/mars.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay34"><b class="movie-title">Mars</b><br/>A Marvel Comics superhero team.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img35" src="Images/gravity.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay35"><b class="movie-title">Gravity</b><br/>A science fiction movie.</div>
+                    </div>
+                    <div class="media-carousel-movies">
+                        <img class="img36" src="Images/martain.jpg" alt="media carousel" width=200 height=200 />
+                        <div class="overlay36"><b class="movie-title">Martian</b><br/>A science fiction movie.</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</div>
+<footer>
+    Powered by 365 Entertainment Portal 2019. All Rights Reserved.
+</footer>
+<div class="logo1"><a style="color: black; text-decoration: none;" href="C:/Users/laksh/OneDrive/Desktop/Suven Consultants Internship/Project-1/index.html"> 365</a></div>
+
+<script>
+        
+        var movieTitle;    
+        var currentGenre = "Genre";
+        var slideIndex = [1,1];
+                        showSlides(1, 0);
+                
+                        function plusSlides(n, no) {
+                                showSlides(slideIndex[no] += n, no);
+                        }
+                
+                        function showSlides(n, no) {                        
+                                var x = document.getElementsByClassName("slides");
+
+                                if (n > x.length) {slideIndex[no] = 1}    
+                                
+                                if (n < 1) {slideIndex[no] = x.length}
+                                
+                                for (var i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";  
+                                }
+                                
+                                x[slideIndex[no]-1].style.display = "block";  
+                        }
+        
+        function showNoResultsText(totalcount){
+                
+                if(totalcount == 0){
+                        document.getElementById("no-results").style.display="block";
+                        console.log('totalcount in showNoResultsText' + totalcount);
+                }
+                else    {
+                        document.getElementById("no-results").style.display="none";
+                }
+                
+        }
+
+
+                function updateResults() {
+                var query = document.getElementsByClassName('search-query')[0].value.trim().toLowerCase(); 
+                var counter = 0;                                                           
+
+                if(currentGenre == 'All'|| currentGenre == 'Genre'){
+                        movieTitle = document.getElementsByClassName('movie-title');
+                }
+                if(currentGenre == 'Action'){
+                        movieTitle = document.getElementsByClassName('movies-action')[0].getElementsByClassName('movie-title');
+                }
+                if(currentGenre == 'Drama'){
+                        movieTitle = document.getElementsByClassName('movies-drama')[0].getElementsByClassName('movie-title');                                
+                }
+                if(currentGenre == 'Sci-Fi'){
+                        movieTitle = document.getElementsByClassName('movies-scifi')[0].getElementsByClassName('movie-title');                        
+                }
+
+
+                for(var name=0; name< movieTitle.length; name++){
+                    var compareMovieTitles = movieTitle[name].innerHTML.toLowerCase();
+                
+                        if(compareMovieTitles.indexOf(query) === -1){
+                                movieTitle[name].closest('div.media-carousel-movies').style.display="none";                                                        
+                        }
+                        else {
+                                movieTitle[name].closest('div.media-carousel-movies').style.display="block";
+                                counter++;
+                        }                    
+                }
+
+                showNoResultsText(counter);                
+        }
+
+                /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+                function toggleGenreList() {
+                        document.getElementById("dropdown-content").classList.toggle("show");                        
+                }
+
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(e) {
+                        
+                        if (!e.target.matches('#dropbtn')) {                
+
+                                var dropdownContent = document.getElementById("dropdown-content");
+                        
+                                if (dropdownContent.classList.contains('show')) {
+                                        dropdownContent.classList.remove('show');
+                                }
+                        }
+                }
+
+                function getMediaPosters(selectedGenre){
+                        var countMovies = 0; 
+                        var mediaCarouselMovies;            
+                        currentGenre = selectedGenre;                                              
+                        document.getElementById("genreText").innerHTML = selectedGenre;
+
+                        if(selectedGenre == 'All'){
+                            document.getElementsByClassName('movies-action')[0].style.display="block";    
+                            document.getElementsByClassName('movies-action')[0].style.display="block";
+                            document.getElementsByClassName('movies-drama')[0].style.display="block";
+                            document.getElementsByClassName('movies-scifi')[0].style.display="block";  
+                            mediaCarouselMovies = document.getElementsByClassName("media-carousel-movies");                             
+                        }
+                        if(selectedGenre == 'Action'){
+                            document.getElementsByClassName('movies-action')[0].style.display="block";
+                            document.getElementsByClassName('movies-drama')[0].style.display="none";
+                            document.getElementsByClassName('movies-scifi')[0].style.display="none";
+                            mediaCarouselMovies = document.getElementsByClassName('movies-action')[0].getElementsByClassName("media-carousel-movies");                           
+                        }
+                        if(selectedGenre == 'Drama'){
+                            document.getElementsByClassName('movies-action')[0].style.display="none";
+                            document.getElementsByClassName('movies-drama')[0].style.display="block";                            
+                            document.getElementsByClassName('movies-scifi')[0].style.display="none"; 
+                            mediaCarouselMovies = document.getElementsByClassName('movies-drama')[0].getElementsByClassName("media-carousel-movies");                               
+                        }
+                        if(selectedGenre == 'Sci-Fi'){
+                            document.getElementsByClassName('movies-action')[0].style.display="none";
+                            document.getElementsByClassName('movies-drama')[0].style.display="none";
+                            document.getElementsByClassName('movies-scifi')[0].style.display="block";
+                            mediaCarouselMovies = document.getElementsByClassName('movies-scifi')[0].getElementsByClassName("media-carousel-movies");
+                        }                        
+
+                        
+                                var mediaCarouselMoviesCount = mediaCarouselMovies.length;
+                                
+                                for(var count = 0; count<mediaCarouselMoviesCount; count++){
+                                        if(mediaCarouselMovies[count].style.display == "block")
+                                                countMovies++;
+                                }
+                                console.log(countMovies);                                
+                        
+                                showNoResultsText(countMovies);
+                }
+        
+        </script> 
+</body>
+</html>
